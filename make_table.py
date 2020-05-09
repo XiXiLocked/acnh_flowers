@@ -1,5 +1,7 @@
+import csv
 from itertools import product
 from collections import Counter
+from math import log2
 
 
 def cross_pattern_one():
@@ -14,6 +16,9 @@ cross_pattern = cross_pattern_one()
 
 def split_gene(gene):
     return [gene[i:i+2] for i in range(0,len(gene),2)]
+
+def encoding_gene(gene):
+    return "%02x"%int(gene,2)
 
 def crossing(gene_a, gene_b):
     cc = Counter()
@@ -41,10 +46,15 @@ def crossing_table(genetypes, filename):
 
     with open(filename,'w') as f:
         for l in lines:
-            f.write("%s,%s,"%(l[0],l[1]))
+            f.write("%s,%s,"%(encoding_gene(l[0]),encoding_gene(l[1])))
             for c,p in l[2:]:
-                f.write('%s %02d,'%(c,p))
+                f.write('%s %d,'%(encoding_gene(c),log2(p)))
             f.write('\n')
+    
+
+def extract_data(data):
+    cp= data.split()
+    return (int(cp[0],16),int(cp[1]))
 
 def crossing3_table():
     genetypes = []
@@ -63,6 +73,29 @@ def crossing4_table():
     crossing_table(genetypes, 'csv/table4.csv')
 
 
+def read_table(gene_num):
+    if gene_num==3:
+        file = 'csv/table3.csv'
+    elif gene_num==4:
+        file = 'csv/table4.csv'
+    else:
+        raise 'no such type'
+
+    with open(file) as f:
+        l = list(csv.reader(f))
+        d = {}
+        for v in l:
+            parent_a = int(v[0],16)
+            parent_b = int(v[1],16)
+            d[parent_a*256+parent_b] = [extract_data(p) for p in v[2:-1]]
+        return d
+
+
+def fun_parents_children(gene_num):
+    d = read_table(gene_num)
+    return lambda a,b: d[a*256+b]
+
 if __name__ == "__main__":
     crossing3_table()
     crossing4_table()
+    

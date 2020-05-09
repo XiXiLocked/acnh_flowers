@@ -1,72 +1,116 @@
 import csv
-from itertools import product
-from collections import Counter
 from pprint import pprint
-t={'00':'00', '01':'01','10':'01', '11':'11'}
-cross = { i+j: list(map(lambda x:t[x[0]+x[1]],product(*zip(*i),*zip(*j))))for i,j in product(['00','01','11'], ['00','01','11'])}
+from make_table import encoding_gene, fun_parents_children
 
 
-def crossing3(gene_a, gene_b):
-     cc = Counter()
-     x0,y0,z0 = gene_a[:2], gene_a[2:4], gene_a[4:6]
-     x1,y1,z1 = gene_b[:2], gene_b[2:4], gene_b[4:6]
-     for x in cross[x0+x1]:
-       for y in cross[y0+y1]:
-         for z in cross[z0+z1]:
-               cc[x+y+z]+=1
-     return cc
+flower_names = ['Roses', 'Carnations', 'Cosmos',
+'Hyacinths', 'Lilies', 'Mums', 'Pansies', 'Roses',
+'Tulips', 'Violets', 'Windflowers',]
 
-def crossing4(gene_a, gene_b):
-     cc = Counter()
-     x0,y0,z0,w0     = gene_a[:2], gene_a[2:4], gene_a[4:6], gene_a[6:8]
-     x1,y1,z1,w1 = gene_b[:2], gene_b[2:4], gene_b[4:6], gene_b[6:8]
-     for x in cross[x0+x1]:
-       for y in cross[y0+y1]:
-         for z in cross[z0+z1]:
-           for w in cross[w0+w1]:
-               cc[x+y+z+w]+=1
-     return cc
-
-m = list(csv.reader(open('csv/ACNH_ACNL Flower Genes - Roses.csv')))[1:]
-genetypes_flower = {a+b+c+d:color for _,_,_,_,a,b,c,d,color in m}
-genetypes = list(genetypes_flower)
-
-not_assigned = 100
-gen_of_genes =[not_assigned]*len(genetypes) 
-
-# initialization
-for i,g in enumerate(genetypes):
-  if 'seed' in genetypes_flower[g]:
-    gen_of_genes[i]=0
-
-
-generation = 0
-while gen_of_genes.count(not_assigned)>0:
-  generation +=1
-  print('breeding generation', generation)
-  exist_gentype = [g for i,g in enumerate(genetypes) if gen_of_genes[i]!= not_assigned]
-  for gi in exist_gentype:
-      for gj in exist_gentype:
-          children = crossing4(gi,gj)
-          for k in children:
-            idx = genetypes.index(k)
-            gen_of_genes[idx] = min(generation,gen_of_genes[idx])
-pprint([(g, genetypes_flower[g],gen_of_genes[i])   for i,g in enumerate(genetypes_flower)])#,  'gene of gen')
-
-min_gen_of_color = set(j.split()[0] for j in genetypes_flower.values())
-colorgen = {}
-for i in min_gen_of_color:
-  colorgen[i] = not_assigned
-
-for i,g in enumerate(genetypes_flower):
-  color = genetypes_flower[g].split()[0]
-  gen = gen_of_genes[i]
-  colorgen[color] = min(colorgen[color],gen)
-
-print('minimun generation of flower color')
-pprint(colorgen)
+def get_flower_genetype(flower):
+    if flower.lower() == 'roses':
+        file = 'csv/ACNH_ACNL Flower Genes - Roses.csv'
+        m = list(csv.reader(open(file)))[1:]
+        genetypes_flower= ['']*(4**4)
+        for  _,_,_,_,a,b,c,d,color in m:
+            idx = int(encoding_gene(a+b+c+d),16)
+            genetypes_flower[idx] = color
+        return genetypes_flower
+    else:
+        files = ['csv/ACNH_ACNL Flower Genes - Carnations.csv',
+                'csv/ACNH_ACNL Flower Genes - Cosmos.csv',
+                'csv/ACNH_ACNL Flower Genes - Hyacinths.csv',
+                'csv/ACNH_ACNL Flower Genes - Lilies.csv',
+                'csv/ACNH_ACNL Flower Genes - Mums.csv',
+                'csv/ACNH_ACNL Flower Genes - Pansies.csv',
+                'csv/ACNH_ACNL Flower Genes - Roses.csv',
+                'csv/ACNH_ACNL Flower Genes - Tulips.csv',
+                'csv/ACNH_ACNL Flower Genes - Violets.csv',
+                'csv/ACNH_ACNL Flower Genes - Windflowers.csv',]
+        for file in files:
+            if flower.lower() in file.lower():
+                m = list(csv.reader(open(file)))[1:]
+                genetypes_flower = ['-'] * (4**3)
+                for _,_,_,_,a,b,c,color in m:
+                    idx = int(encoding_gene(a+b+c),16)
+                    genetypes_flower[idx] = color
+                return genetypes_flower
+        raise "no such flower"
 
 
 
+def bfs_crossing(flower,gene_num):
+    gene_types = get_flower_genetype(flower)
+    gene_fun = fun_parents_children(gene_num)
 
+    gene_crossing_methods = {}
+    for gene, color in enumerate(gene_types):
+        if color != '':
+            if 'seed' in color:
+                gene_crossing_methods[gene] = [(gene,gene,8,0)]
+            else:
+                gene_crossing_methods[gene] = []
+    gene_count =  len(gene_types)
+    duplicate_check = [[False for _ in range(gene_count)] for _ in range(gene_count)]
+    exist_gene = [gene for gene in gene_crossing_methods if len(gene_crossing_methods[gene])>0 ]
+
+    for generation in [1,2,3,4]:
+        exist_gene = [gene for gene in gene_crossing_methods if len(gene_crossing_methods[gene])>0 ]
+        print('generation' ,generation-1 , 'exists',len(exist_gene))
+        print('crossing gen', generation)
+
+        for genei in exist_gene:
+            for genej in exist_gene:
+                # skip half methods
+                if genei>genej: continue
+                if duplicate_check[genei][genej]:
+                    continue
+                duplicate_check[genei][genej] = True
+
+                children = gene_fun(genei,genej)
+                for gene,p in children:
+                    if gene not in [genei, genej]:
+                        gene_crossing_methods[gene].append((genei,genej,p,generation))
+
+
+    return gene_crossing_methods,gene_types
+                
+def find_parents(target_gene, methods,genes, generation):
+    prob =5
+    parents = [ v for v in methods[target_gene] if v[3]<generation and  v[2]>=prob ]
+    return sorted(parents, key = lambda x:x[2])
+
+def print_parents(prefix, gene, methods, genes, generation=999):
+    if generation<=4:return
+    parents = find_parents(gene,methods, genes, generation)
+    for pa,pb,prob,gen in parents[:20]:
+        eprob = 2**(prob-8)
+        print(prefix+'-', genes[gene]+"(%d)="%gene, genes[pa]+"(%d)"%pa,genes[pb]+"(%d)"%pb,gen, '%.1f%%'%(eprob*100))
+        if "seed" not in genes[pa]:
+            print_parents(prefix+"| ", pa,methods,genes, gen)
+        if pa!=pb:
+            if "seed" not in genes[pb]:
+                print_parents(prefix+"| ", pb,methods,genes, gen)
+
+
+
+if __name__ == "__main__":
+    import pickle
+    # methods,genes = bfs_crossing('roses', 4)
+    # pickle.dump((methods,genes),open('gen.pkl','wb'))
+
+    methods, genes = pickle.load(open('gen.pkl','rb'))
+    # Blue_gene= 252
+    Blue_gene= 252
+    print('-'*20)
+    
+    # print_parents('',4, methods,genes,3)
+    # print_parents('',Blue_gene, methods,genes)
+
+    parents = [ v for v in methods[Blue_gene] if v[2]==6 ]
+    parents.sort(key = lambda x:x[2])
+    for pa,pb,prob,gen in parents:
+        print("Blue(%d) %.1f%%= "%(Blue_gene, 2**(prob-8)*100),  genes[pa]+"(%d)"%pa,genes[pb]+"(%d)"%pb)
+        print_parents('',pa, methods,genes,gen)
+        print_parents('',pb, methods,genes,gen)
   
