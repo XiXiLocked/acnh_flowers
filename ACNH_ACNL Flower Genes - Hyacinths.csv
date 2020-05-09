@@ -1,0 +1,28 @@
+Hex,Genotype,Numeric,Binary,R,Y,W,Color
+00,rryyWW,0 - 0 - 0,00 - 00 - 00,00,00,00,White
+01,rryyWw,0 - 0 - 1,00 - 00 - 01,00,00,01,White (seed)
+03,rryyww,0 - 0 - 2,00 - 00 - 11,00,00,11,Blue
+04,rrYyWW,0 - 1 - 0,00 - 01 - 00,00,01,00,Yellow
+05,rrYyWw,0 - 1 - 1,00 - 01 - 01,00,01,01,Yellow
+07,rrYyww,0 - 1 - 2,00 - 01 - 11,00,01,11,White
+0c,rrYYWW,0 - 2 - 0,00 - 11 - 00,00,11,00,Yellow (seed)
+0d,rrYYWw,0 - 2 - 1,00 - 11 - 01,00,11,01,Yellow
+0f,rrYYww,0 - 2 - 2,00 - 11 - 11,00,11,11,Yellow
+10,RryyWW,1 - 0 - 0,01 - 00 - 00,01,00,00,Red
+11,RryyWw,1 - 0 - 1,01 - 00 - 01,01,00,01,Pink
+13,Rryyww,1 - 0 - 2,01 - 00 - 11,01,00,11,White
+14,RrYyWW,1 - 1 - 0,01 - 01 - 00,01,01,00,Orange
+15,RrYyWw,1 - 1 - 1,01 - 01 - 01,01,01,01,Yellow
+17,RrYyww,1 - 1 - 2,01 - 01 - 11,01,01,11,Yellow
+1c,RrYYWW,1 - 2 - 0,01 - 11 - 00,01,11,00,Orange
+1d,RrYYWw,1 - 2 - 1,01 - 11 - 01,01,11,01,Yellow
+1f,RrYYww,1 - 2 - 2,01 - 11 - 11,01,11,11,Yellow
+30,RRyyWW,2 - 0 - 0,11 - 00 - 00,11,00,00,Red
+31,RRyyWw,2 - 0 - 1,11 - 00 - 01,11,00,01,Red (seed)
+33,RRyyww,2 - 0 - 2,11 - 00 - 11,11,00,11,Red
+34,RRYyWW,2 - 1 - 0,11 - 01 - 00,11,01,00,Blue
+35,RRYyWw,2 - 1 - 1,11 - 01 - 01,11,01,01,Red
+37,RRYyww,2 - 1 - 2,11 - 01 - 11,11,01,11,Red
+3c,RRYYWW,2 - 2 - 0,11 - 11 - 00,11,11,00,Purple
+3d,RRYYWw,2 - 2 - 1,11 - 11 - 01,11,11,01,Purple
+3f,RRYYww,2 - 2 - 2,11 - 11 - 11,11,11,11,Purple

@@ -1,0 +1,10 @@
+Hex,Genotype,Binary,X,X,Color
+00,,00 - 00,00,00,Unknown
+01,,00 - 01,00,01,Unknown
+03,,00 - 11,00,11,Unknown
+04,,01 - 00,01,00,Unknown
+05,,01 - 01,01,01,Pink (mail)
+07,,01 - 11,01,11,Unknown
+0c,,11 - 00,11,00,Unknown
+0d,,11 - 01,11,01,Red (mail)
+0f,,11 - 11,11,11,Unknown
