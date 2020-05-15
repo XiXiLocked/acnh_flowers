@@ -14,9 +14,7 @@ class crossing_result:
 
 def all_combination(a:list):
     a = list(a)
-    # return [[i] for i in a]
     l = []
-    # for count in range(min(1,len(a))):
     for count in range(len(a)):
         l.extend(list(combinations(a,count+1)))
     return l
@@ -49,27 +47,58 @@ def SplitResult(result:crossing_result,color_gene):
     return l
 
 
-        
+def reducing(methods:List[crossing_result],old:List[crossing_result], color_genes):
 
 
-def crossing(flower):
-    color_gene, gene_crossing_fun,prob_fun = get_flower_data(flower)
+    # rec_color = {k.method:0.0 for k in methods if k.method is str}
+    # filtered = []
+    # for result in methods:
+    #     if result.method is str:
+    #         if result.prob>rec_color[result.method]:
+    #             rec_color[result.method]= result.prob
+
+            
+    #     if result.method is set:
+    #         if len(result.method)<4:
+    #             filtered.append(result)
     
+    return methods 
+
+def pick_methods(methods:List[crossing_result],color_genes):
+    colors = set(color_genes)
+    colors.discard('-')
+    seeds =  [ a for a in colors if 'seed' in a]
+    for i in seeds:
+        colors.discard(i)
+        colors.discard(i.split()[0])
+    
+    for m in methods:
+        print(m)
+        # if m.method is str and m.method in colors:
+        #     if m.prob>0.1:
+        #         print(m)
+
+
+    
+
+
+
+def crossing(flower, iterations):
+    color_gene, gene_crossing_fun,prob_fun = get_flower_data(flower)
 
     parents_result = []
     for gene,color in enumerate(color_gene):
         if 'seed' in color :
             parents_result.append(crossing_result({gene:1.0},1.0,color,[]))
     
-    results_methods = {}
     skip_i = -1
-    for _ in range(2):
+    for _ in range(iterations):
         print('parents', len(parents_result))
         children_gene = []
-        # normal crossing
         for i,a in enumerate(parents_result):
             if i<skip_i: continue
             skip_i = i
+            # normal crossing
             for j,b in enumerate(parents_result):
                 # crossing is symmetric, skip half crossing results
                 if i<j:break
@@ -91,27 +120,14 @@ def crossing(flower):
         gen_next = []
         for i in children_gene:
             gen_next.extend(SplitResult(i,color_gene))
+        print(len(gen_next))
 
-        for k in gen_next:
-            # only one color
-            if  k.method is str:
-                color = k.method
-                t = results_methods.get(color,[])
-                if len(t)<10:
-                    t.append(k)
-                    results_methods[color] = t
-
-        parents_result.extend(gen_next)
-
-    print(results_methods)
-
-    # for i in results_methods:
-    #     print(i)
-    #     if i.lower()=='black':
-    #         for line in results_methods[i]:
-    #             pprint.pprint(line)
-
-
+        # remove inferior methods
+        gen_next_filtered = reducing(gen_next,parents_result,color_gene)
+        parents_result.extend(gen_next_filtered)
+    
+    pick_methods(parents_result,color_gene)
+        
 
 if __name__ == "__main__":
-    crossing('cosmos')
+    crossing('cosmos',2)
