@@ -11,6 +11,12 @@ class crossing_result:
     prob:float
     method:Union[set, str]
     parents:List #= field(repr=False)
+    def __repr__(self):
+        if  'seed' in self.method:
+            return self.method
+        else:
+            q = ",".join([crossing_result.__repr__(t) for t in self.parents])
+            return "("+ str(self.method)+(" %.2f "%self.prob)+q +")"
 
 def all_combination(a:list):
     a = list(a)
@@ -46,23 +52,64 @@ def SplitResult(result:crossing_result,color_gene):
         l.append(a_group)
     return l
 
+def reducing_crossing(methods:List[crossing_result], color_genes):
+    return methods
 
-def reducing(methods:List[crossing_result],old:List[crossing_result], color_genes):
+def reducing_dup(methods:List[crossing_result], color_genes):
+    return methods
 
+def reducing_last(methods:List[crossing_result],old:List[crossing_result], color_genes):
+    seed_gene =set()
+    for i,c in enumerate(color_genes):
+        if 'seed' in c:
+            seed_gene.add(i)
+    filtered = []
+    for result in methods:
+        # discard low prob methods
+        # if result.prob <0.1:
+        #     continue
 
-    # rec_color = {k.method:0.0 for k in methods if k.method is str}
-    # filtered = []
-    # for result in methods:
-    #     if result.method is str:
-    #         if result.prob>rec_color[result.method]:
-    #             rec_color[result.method]= result.prob
+        if isinstance(result.method, str):
+            if result.method =='dup':
+                p = result.parents[0]
+                if isinstance(p.method, set):
+                    continue
+                elif set(result.gene)<= set(p.parents[0].gene):
+                        continue
+                else:
+                    filtered.append(result)
+            elif result.method=='crossing':
+                filtered.append(result)
+            elif result.method=='seed':
+                filtered.append(result)
+            else:
+                # the result is seed
+                p = result.parents[0]
+                if set(result.gene.keys()) <= seed_gene:
+                    continue
+                elif p.method=='crossing':
+                    # same as dup
+                    if len(p.parents[0].gene)==1 and set(p.parents[0].gene)== set(p.parents[1].gene):
+                        continue
+                    else:
+                        filtered.append(result)
+                elif p.method == 'dup':
+                    # no new gene
+                    if set(result.gene)<= set(p.parents[0].gene):
+                        continue
+                    else:
+                        filtered.append(result)
+                else:
+                    filtered.append(result)
+        else:
+            # continue
+            # if len(result.method)>2:
+            #     continue
+            # else:
+                filtered.append(result)
 
-            
-    #     if result.method is set:
-    #         if len(result.method)<4:
-    #             filtered.append(result)
     
-    return methods 
+    return filtered 
 
 def pick_methods(methods:List[crossing_result],color_genes):
     colors = set(color_genes)
@@ -72,15 +119,12 @@ def pick_methods(methods:List[crossing_result],color_genes):
         colors.discard(i)
         colors.discard(i.split()[0])
     
-    for m in methods:
-        print(m)
-        # if m.method is str and m.method in colors:
-        #     if m.prob>0.1:
-        #         print(m)
-
-
-    
-
+    print(colors)
+    print('methods',len(methods))
+    for clr in colors:
+        for m in methods:
+            if m.method == clr:
+                print(m)
 
 
 def crossing(flower, iterations):
@@ -94,7 +138,8 @@ def crossing(flower, iterations):
     skip_i = -1
     for _ in range(iterations):
         print('parents', len(parents_result))
-        children_gene = []
+        children_crossing = []
+        children_dup = []
         for i,a in enumerate(parents_result):
             if i<skip_i: continue
             skip_i = i
@@ -107,27 +152,35 @@ def crossing(flower, iterations):
                     prob = a.gene[u]*b.gene[v]
                     L_gene_prob = gene_crossing_fun(u,v)
                     for gene,p in L_gene_prob:
-                        dd[gene] =dd.get(gene,0)+ prob*prob_fun(p)
-                children_gene.append(crossing_result(dd,1.0,"crossing",[a,b]))
+                        dd[gene] =dd.get(gene,0.0)+ prob*prob_fun(p)
+                children_crossing.append(crossing_result(dd,1.0,"crossing",[a,b]))
             # self duplication
+            dd = {}
             for u in a.gene:
-                dd = {}
                 L_gene_prob = gene_crossing_fun(u,u)
                 for gene,p in L_gene_prob:
-                    dd[gene]= prob_fun(p)
-                children_gene.append(crossing_result(dd,1.0,"dup",[a]))
+                    dd[gene]= dd.get(gene,0.0)+prob_fun(p)*a.gene[u]
+            children_dup.append(crossing_result(dd,1.0,"dup",[a]))
 
-        gen_next = []
-        for i in children_gene:
-            gen_next.extend(SplitResult(i,color_gene))
-        print(len(gen_next))
+        children_crossing = reducing_crossing(children_crossing,color_gene)
+        gen_next_crossing = []
+        for i in children_crossing:
+            gen_next_crossing.extend(SplitResult(i,color_gene))
+        
+        children_dup = reducing_dup(children_dup, color_gene)
+        gen_next_dup = []
+        for i in children_dup:
+            gen_next_dup.extend(SplitResult(i,color_gene))
+
+        gen_next = gen_next_dup+gen_next_crossing
 
         # remove inferior methods
-        gen_next_filtered = reducing(gen_next,parents_result,color_gene)
+        gen_next_filtered = reducing_last(gen_next,parents_result,color_gene)
+        print(len(gen_next_filtered))
         parents_result.extend(gen_next_filtered)
     
     pick_methods(parents_result,color_gene)
         
 
 if __name__ == "__main__":
-    crossing('cosmos',2)
+    crossing('cosmos', 2)
