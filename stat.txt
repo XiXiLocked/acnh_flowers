@@ -1,0 +1,57 @@
+Roses color count= 8 : Counter({'White': 18, 'Yellow': 18, 'Red': 13, 'Purple': 9, 'Pink': 9, 'Orange': 9, 'Black': 4, 'Blue': 1})
+Cosmos color count= 6 : Counter({'Orange': 7, 'Yellow': 5, 'Red': 5, 'White': 4, 'Pink': 4, 'Black': 2})
+Hyacinths color count= 7 : Counter({'Yellow': 9, 'Red': 6, 'White': 4, 'Purple': 3, 'Blue': 2, 'Orange': 2, 'Pink': 1})
+Lilies color count= 6 : Counter({'White': 8, 'Yellow': 7, 'Orange': 4, 'Red': 3, 'Pink': 3, 'Black': 2})
+Mums color count= 6 : Counter({'Purple': 6, 'Yellow': 6, 'Red': 6, 'Pink': 4, 'White': 3, 'Green': 2})
+Pansies color count= 6 : Counter({'Yellow': 8, 'Red': 6, 'Orange': 5, 'Blue': 3, 'Purple': 3, 'White': 2})
+Tulips color count= 7 : Counter({'Yellow': 9, 'White': 5, 'Red': 5, 'Purple': 3, 'Orange': 2, 'Black': 2, 'Pink': 1})
+Windflowers color count= 6 : Counter({'Orange': 8, 'Red': 6, 'Pink': 5, 'Blue': 3, 'Purple': 3, 'White': 2})
+Roses 85 Pink
+Cosmos 21 Orange
+Hyacinths 21 Yellow
+Lilies 21 Yellow
+Mums 21 Red
+Pansies 21 Orange
+Tulips 21 Yellow
+Windflowers 21 Pink
+Roses
+White (seed) 0b000100
+Yellow (seed) 0b110000
+Red (seed) 0b11000001
+Cosmos
+White (seed) 0b000001
+Yellow (seed) 0b001101
+Red (seed) 0b110000
+Hyacinths
+White (seed) 0b000001
+Yellow (seed) 0b001100
+Red (seed) 0b110001
+Lilies
+White (seed) 0b000011
+Yellow (seed) 0b001100
+Red (seed) 0b110001
+Mums
+White (seed) 0b000001
+Yellow (seed) 0b001100
+Red (seed) 0b110000
+Pansies
+White (seed) 0b000001
+Yellow (seed) 0b001100
+Red (seed) 0b110000
+Tulips
+White (seed) 0b000001
+Yellow (seed) 0b001100
+Red (seed) 0b110001
+Windflowers
+White (seed) 0b000001
+Orange (seed) 0b001100
+Red (seed) 0b110000
+cosmos 0 White
+cosmos 16 Pink
+cosmos 48 Red (seed)
+cosmos 4 Yellow
+cosmos 20 Orange
+cosmos 52 Orange
+cosmos 12 Yellow
+cosmos 28 Orange
+cosmos 60 Black

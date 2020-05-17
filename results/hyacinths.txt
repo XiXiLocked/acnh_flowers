@@ -1,0 +1,593 @@
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (crossing 
+    White (seed),
+    White (seed))),
+    White (seed)))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (crossing 
+    White (seed),
+    White (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (dup White (seed))),
+    White (seed)))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (dup White (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (crossing 
+    White (seed),
+    White (seed))),
+    White (seed)))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (crossing 
+    White (seed),
+    White (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (dup White (seed))),
+    White (seed)))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (dup White (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (crossing 
+    White (seed),
+    White (seed))),
+    White (seed)))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (crossing 
+    White (seed),
+    White (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (dup White (seed))),
+    White (seed)))))
+(Pink 0.562500  (crossing 
+    (Red 0.500000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.500000  (crossing 
+    (Blue 0.250000  (dup White (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Pink 0.500000  (crossing 
+    Red (seed),
+    White (seed)))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (dup (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.250000  (dup (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))))
+(Purple 0.250000  (dup (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed)))))))
+(Purple 0.250000  (dup (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.250000  (dup (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.250000  (crossing 
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))))),
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.250000  (dup (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.125000  (crossing 
+    (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))))
+(Purple 0.125000  (crossing 
+    (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.125000  (crossing 
+    (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))))
+(Purple 0.125000  (crossing 
+    (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed)))))))
+(Purple 0.125000  (crossing 
+    (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.125000  (crossing 
+    (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed))))),
+    (Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))))
+(Purple 0.125000  (dup (Red 0.250000  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (White 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))))
+(Purple 0.062500  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
+(Purple 0.062500  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
+(Purple 0.062500  (crossing 
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
+(Purple 0.062500  (dup (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
+(Purple 0.062500  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Yellow 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
+(Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))
+(Blue 0.250000  (crossing 
+    White (seed),
+    White (seed)))
+(Blue 0.250000  (dup White (seed)))
+(Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    Red (seed)))
+(Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 0.250000  (crossing 
+    Red (seed),
+    White (seed)))))
+(Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (crossing 
+    Red (seed),
+    Red (seed)))))
+(Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Red 1.000000  (dup Red (seed)))))
+(Blue 0.125000  (crossing 
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed))),
+    (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
+(Blue 0.125000  (dup (Orange 0.500000  (crossing 
+    Red (seed),
+    Yellow (seed)))))
